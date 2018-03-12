@@ -1,0 +1,11 @@
+{
+    "name": "tommy-bot-mk2",
+    "version": "1.0.0",
+    "description": "rompi palle ale",
+    "main": "bot.js",
+    "author": "TOMMY",
+    "dependencies": {
+        "discord.js": "^11.3.2",
+        "eslint": "^4.18.2"
+    }
+}
