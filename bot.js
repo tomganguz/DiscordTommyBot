@@ -1,5 +1,5 @@
 /*
-  A ping pong bot, whenever you send "ping", it replies "pong".
+  TEST BOT DI TOMMY
 */
 
 // Import the discord.js module
@@ -14,23 +14,28 @@ const token = 'MzI2NzMwMzc2OTIxNzQzMzYw.DYhnUQ.py6vdCCIkYhqlaD39yUT2TJkRJk';
 // The ready event is vital, it means that your bot will only start reacting to information
 // from Discord _after_ ready is emitted
 client.on('ready', () => {
-  console.log('I am ready!');
+  console.log('[INFO] Tommybot pronto');
+  client.user.setActivity('YEA BOI');
 });
 
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
-  if (message.content === 'ping') {
+  if (message.content === '!tommybot') {
     // Send "pong" to the same channel
-    message.channel.send('pong');
+    message.channel.send('**TOMMYBOT V.01** \n\n `!mioavatar` URL del tuo avatar discord \n `!test` Messagio di test del bot');
   }
 
-  if (message.content === 'pong') {
+  if (message.content === '!test') {
     // Send "pong" to the same channel
-    message.channel.send('NFAME!!!!');
+    // message.channel.reply('**[INFORMAZIONE FONDAMENTALE]** `ALE È LEZZO`');
+    message.reply('**[INFORMAZIONE FONDAMENTALE]** `ALE È LEZZO`');
   }
 
+  if (message.content === '!mioavatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
 });
-
 // Log our bot in
 client.login(token);
